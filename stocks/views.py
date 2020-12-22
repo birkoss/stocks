@@ -34,13 +34,15 @@ def home(request):
             total_buy += share.amount * share.value
             total_shares += share.amount
 
+        total_value = (total_shares * last_value)
+
         stocks.append({
             "stock": stock,
             "total_shares": total_shares,
             "total_buy": total_buy,
-            "total_value": total_shares * last_value,
+            "total_value": total_value,
             "stock_value": stock_value,
-
+            "diff_value": total_value - total_buy,
             "shares": shares,
         })
 

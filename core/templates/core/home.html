@@ -18,6 +18,7 @@
 					<th scope="col">Shares</th>
 					<th scope="col">Bought Value</th>
 					<th scope="col">Current Value</th>
+					<th scope="col">Diff Value</th>
 					<th scope="col">Last Value</th>
 				</tr>
 			</thead>
@@ -28,6 +29,7 @@
 					<td>{{ stock.total_shares }}</td>
 					<td>{{ stock.total_buy | floatformat:"2" }} $</td>
 					<td>{{ stock.total_value | floatformat:"2" }} $</td>
+					<td>{{ stock.diff_value | floatformat:"2" }} $</td>
 					<td>{{ stock.stock_value.value | floatformat:"2" }} $ <br />{{ stock.stock_value.date_added }}</td>
 					<td>
 						
