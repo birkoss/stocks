@@ -16,16 +16,19 @@
 				<tr>
 					<th scope="col">Nom</th>
 					<th scope="col">Shares</th>
-					<th scope="col">Actions</th>
+					<th scope="col">Bought Value</th>
+					<th scope="col">Current Value</th>
+					<th scope="col">Last Value</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for stock in stocks %}
 				<tr>
 					<td>{{ stock.stock.name }}</td>
-					<td>{{ stock.total_shares }}</td>
-					<td>{{ stock.total_buy }}</td>
-					<td>{{ stock.total_value }}</td>
+					<td>{{ stock.total_shares }} $</td>
+					<td>{{ stock.total_buy }} $</td>
+					<td>{{ stock.total_value }} $</td>
+					<td>{{ stock.stock_value.value }} $ <br />{{ stock.stock_value.date_added }}</td>
 					<td>
 						
 					</td>

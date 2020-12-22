@@ -37,8 +37,10 @@ def home(request):
         stocks.append({
             "stock": stock,
             "total_shares": total_shares,
-            "total_buy": total_buy,
-            "total_value": total_shares * last_value,
+            "total_buy": str(round(total_buy, 2)),
+            "total_value": str(round(total_shares * last_value, 2)),
+            "stock_value": stock_value,
+
             "shares": shares,
         })
 
