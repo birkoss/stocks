@@ -25,10 +25,10 @@
 				{% for stock in stocks %}
 				<tr>
 					<td>{{ stock.stock.name }}</td>
-					<td>{{ stock.total_shares }} $</td>
-					<td>{{ stock.total_buy }} $</td>
-					<td>{{ stock.total_value }} $</td>
-					<td>{{ stock.stock_value.value }} $ <br />{{ stock.stock_value.date_added }}</td>
+					<td>{{ stock.total_shares }}</td>
+					<td>{{ stock.total_buy | floatformat:"2" }} $</td>
+					<td>{{ stock.total_value | floatformat:"2" }} $</td>
+					<td>{{ stock.stock_value.value | floatformat:"2" }} $ <br />{{ stock.stock_value.date_added }}</td>
 					<td>
 						
 					</td>
